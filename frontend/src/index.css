@@ -1,0 +1,202 @@
+:root {
+  color-scheme: light dark;
+  --bg: #ffffff;
+  --panel: #f4f4f5;
+  --border: #e4e4e7;
+  --accent: #2563eb;
+  --user: #2563eb;
+  --text: #18181b;
+  --muted: #71717a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* --- Header --- */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.header h1 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+.doc-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.doc-controls select {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+}
+.upload-btn {
+  cursor: pointer;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+.upload-btn:hover {
+  background: var(--panel);
+}
+
+/* --- Layout --- */
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+.chat {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  min-width: 0;
+}
+.source-panel {
+  flex: 1;
+  max-width: 380px;
+  border-left: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  background: var(--panel);
+}
+
+/* --- Messages --- */
+.messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.empty {
+  color: var(--muted);
+  font-style: italic;
+}
+.msg {
+  display: flex;
+}
+.msg.user {
+  justify-content: flex-end;
+}
+.bubble {
+  max-width: 80%;
+  padding: 0.65rem 0.9rem;
+  border-radius: 12px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.msg.user .bubble {
+  background: var(--user);
+  color: #fff;
+  border-bottom-right-radius: 3px;
+}
+.msg.assistant .bubble {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-bottom-left-radius: 3px;
+}
+.thinking {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* --- Citations --- */
+.cite {
+  border: none;
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--accent);
+  font: inherit;
+  font-weight: 600;
+  padding: 0 4px;
+  margin: 0 1px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.cite:hover {
+  background: rgba(37, 99, 235, 0.3);
+}
+.cite-dead {
+  color: var(--muted);
+}
+
+/* --- Composer --- */
+.composer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+.composer textarea {
+  flex: 1;
+  resize: none;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  background: var(--bg);
+  color: var(--text);
+}
+.composer button {
+  padding: 0 1.1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.composer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Source panel content --- */
+.source-panel h3 {
+  margin: 0 0 0.25rem;
+}
+.src-meta {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.src-content {
+  line-height: 1.55;
+  white-space: pre-wrap;
+  font-size: 0.92rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #18181b;
+    --panel: #27272a;
+    --border: #3f3f46;
+    --text: #f4f4f5;
+    --muted: #a1a1aa;
+  }
+}

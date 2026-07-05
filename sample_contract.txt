@@ -1,0 +1,39 @@
+SERVICE AGREEMENT
+
+This Service Agreement (the "Agreement") is entered into as of March 1, 2026 (the "Effective Date") by and between Acme Analytics Ltd., a company registered in Bulgaria with its registered office at 15 Vitosha Blvd., Sofia (the "Provider"), and Northwind Retail EOOD, a company registered in Bulgaria with its registered office at 8 Cherni Vrah Blvd., Sofia (the "Client"). The Provider and the Client are together referred to as the "Parties".
+
+1. Scope of Services
+The Provider shall design, develop and maintain a data analytics dashboard for the Client (the "Services"), as further described in Schedule A. The Provider shall perform the Services with reasonable skill and care and in accordance with generally accepted industry standards.
+
+2. Term
+This Agreement shall commence on the Effective Date and continue for an initial period of twelve (12) months (the "Initial Term"), unless terminated earlier in accordance with Section 6. Upon expiry of the Initial Term, this Agreement shall automatically renew for successive twelve (12) month periods unless either Party gives at least thirty (30) days' written notice of non-renewal.
+
+3. Fees and Payment
+In consideration of the Services, the Client shall pay the Provider the fees set out in the table below. All fees are exclusive of VAT. The Provider shall issue invoices monthly, and the Client shall pay each undisputed invoice within fifteen (15) days of receipt. Late payments shall accrue interest at a rate of 1% per month.
+
+Service                     Frequency                   Fee (BGN)               
+Dashboard development       One-time                    12,000                  
+Maintenance & support       Monthly                     1,500                   
+Ad-hoc analytics            Per request                 200 / hour              
+
+4. Confidentiality
+Each Party shall keep confidential all non-public information disclosed by the other Party in connection with this Agreement and shall not use such information for any purpose other than performing its obligations hereunder. This obligation shall survive termination of this Agreement for a period of three (3) years.
+
+5. Intellectual Property
+All intellectual property rights in the deliverables created by the Provider under this Agreement shall, upon full payment of the applicable fees, be assigned to the Client. The Provider retains ownership of any pre-existing tools, libraries and know-how used in providing the Services.
+
+6. Termination
+Either Party may terminate this Agreement immediately by written notice if the other Party commits a material breach that is not remedied within fourteen (14) days of written notice. Upon termination, the Client shall pay for all Services performed up to the date of termination.
+
+7. Limitation of Liability
+The Provider's total aggregate liability arising out of or in connection with this Agreement shall not exceed the total fees paid by the Client in the twelve (12) months preceding the event giving rise to the claim. Neither Party shall be liable for any indirect or consequential losses.
+
+8. Governing Law
+This Agreement shall be governed by and construed in accordance with the laws of the Republic of Bulgaria. Any dispute arising out of this Agreement shall be subject to the exclusive jurisdiction of the courts of Sofia.
+
+
+IN WITNESS WHEREOF, the Parties have executed this Agreement as of the Effective Date.
+
+For the Provider: ______________________    For the Client: ______________________
+Name: Ivan Petrov                            Name: Maria Georgieva
+Title: Managing Director                     Title: Chief Operating Officer

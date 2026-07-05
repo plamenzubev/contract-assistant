@@ -1,0 +1,22 @@
+# --- Secrets ---
+.env
+
+# --- Python / Django ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+db.sqlite3
+/backend/media/
+/backend/staticfiles/
+
+# --- Node / React ---
+node_modules/
+/frontend/dist/
+npm-debug.log*
+
+# --- OS / IDE ---
+.DS_Store
+.idea/
+.vscode/

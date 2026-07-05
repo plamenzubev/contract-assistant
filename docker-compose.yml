@@ -1,0 +1,29 @@
+# Docker Compose for the development environment.
+# At this stage we bring up ONLY the database (Postgres + pgvector).
+# Django and React run directly on the host (easier to debug and learn).
+services:
+  db:
+    # The official pgvector image = Postgres 16 with the "vector" extension already compiled.
+    # The extension is NOT yet enabled in the database — we do that via a migration in Stage 2.
+    image: pgvector/pgvector:pg16
+    container_name: contract_assistant_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      # host:container — 5432 on the machine points to Postgres in the container
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      # Data survives `docker compose down`; it's only removed with `down -v`.
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      # Lets us easily wait for the database to be ready later, if we add a backend service.
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:
